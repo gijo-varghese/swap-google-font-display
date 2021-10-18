@@ -4,7 +4,7 @@ Contributors: gijo, flyingpress
 Tags: fonts, google fonts, web font, display swap
 Requires at least: 3.0.1
 Tested up to: 5.8
-Stable tag: 1.0.7
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,9 +33,9 @@ Just install the plugin and active it. No further configuration is needed.
 
 == Changelog ==
 
-= 1.0.7 =
+= 1.1.0 =
 
-- Updated plugin links
+- New: Support for Google Fonts v2
 
 = 1.0.6 =
 

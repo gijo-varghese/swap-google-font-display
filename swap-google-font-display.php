@@ -3,7 +3,7 @@
  * Plugin Name:       Swap Google Fonts Display
  * Plugin URI:        https://wordpress.org/plugins/swap-google-font-display/
  * Description:       Ensure text remains visible during webfont load
- * Version:           1.0.7
+ * Version:           1.1.0
  * Author:            FlyingPress
  * Author URI:        https://flying-press.com/
  * License:           GPL-2.0+
@@ -16,7 +16,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'GOOGLE_FONT_DISPLAY_SWAPPER_VERSION', '1.0.6' );
+define( 'GOOGLE_FONT_DISPLAY_SWAPPER_VERSION', '1.1.0' );
 
 // Inject dispaly=swap to Google Fonts
 function google_fonts_ds_inject_display_swap($html) {
@@ -26,6 +26,7 @@ function google_fonts_ds_inject_display_swap($html) {
 	
 	// Add font-display=swap as a querty parameter to Google fonts
     $html = str_replace("googleapis.com/css?family", "googleapis.com/css?display=swap&family", $html);
+    $html = str_replace("googleapis.com/css2?family", "googleapis.com/css2?display=swap&family", $html);
 
     // Fix for Web Font Loader
     $html = preg_replace("/(WebFontConfig\['google'\])(.+[\w])(.+};)/", '$1$2&display=swap$3', $html);
